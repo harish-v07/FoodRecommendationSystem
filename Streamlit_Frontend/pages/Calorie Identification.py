@@ -33,7 +33,7 @@ nutrition_file_path = "C:/Users/Harish/OneDrive/Desktop/ProjectFinal/Data/nutrit
 nutrition_data = pd.read_csv(nutrition_file_path)
 
 # Load the custom-trained model
-model_path = "C:/Users/Harish/OneDrive/Desktop/ProjectFinal/FastAPI_Backend/model_trained_101class.hdf5"
+model_path = "C:/Users/Harish/OneDrive/Desktop/ProjectFinal/FastAPI_Backend/best_model_101class.hdf5"
 model = tf.keras.models.load_model(model_path)
 st.success("Custom model successfully loaded!")
 
@@ -103,3 +103,4 @@ if uploaded_file is not None:
     st.write(f"- **Fat**: {nutrition_data['fat']} g")
     st.write(f"- **Carbohydrates**: {nutrition_data['carbohydrates']} g")
     st.write(f"- **Vitamins**: {nutrition_data['vitamins']} g")
+
